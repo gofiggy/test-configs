@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <service name="XMLService">
+        <port>9090</port>
+        <threads>20</threads>
+        <enabled>true</enabled>
+    </service>
+    <database type="postgresql">
+        <host>db.xml.example.com</host>
+        <port>5432</port>
+        <credentials>
+            <user>xml_user</user>
+            <!-- Password should be handled securely -->
+            <password>xml_pass_placeholder</password>
+        </credentials>
+        <pool enabled="true" max_connections="100"/>
+    </database>
+    <logging>
+        <level>INFO</level>
+        <appender name="file">
+            <path>/var/log/xml_service.log</path>
+        </appender>
+        <appender name="console"/>
+    </logging>
+</configuration> 

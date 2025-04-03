@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features>
+    <feature name="search_v2" enabled="true">
+        <parameter name="index_depth" value="10"/>
+        <parameter name="allow_fuzzy" value="false"/>
+    </feature>
+    <feature name="user_profile_v3" enabled="false">
+        <parameter name="avatar_size_limit_kb" value="512"/>
+    </feature>
+</features> 
