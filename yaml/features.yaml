@@ -9,5 +9,5 @@ experiments:
     - 999
   api_version: 2.1
   advanced_search:
-    enabled: true
+    enabled: false
     indexing_depth: 5
