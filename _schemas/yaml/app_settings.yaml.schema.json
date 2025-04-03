@@ -1,5 +1,5 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Schema for yaml/app_settings.yaml",
     "description": "Validates the structure after server-side templating.",
     "type": "object",
