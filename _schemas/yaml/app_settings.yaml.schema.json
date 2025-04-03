@@ -1,0 +1,39 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Schema for yaml/app_settings.yaml",
+    "description": "Validates the structure after server-side templating.",
+    "type": "object",
+    "properties": {
+      "application": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "version": { "type": "string" },
+          "log_level": {
+            "type": "string",
+            "enum": ["debug", "info", "warn", "error", "fatal", "panic"]
+          }
+        },
+        "required": ["name", "version", "log_level"]
+      },
+      "external_service": {
+        "type": "object",
+        "properties": {
+          "url": { "type": "string", "format": "uri" },
+          "api_key": { "type": "string" }
+        },
+        "required": ["url", "api_key"]
+      },
+      "calculated_timeout_ms": {
+          "description": "Timeout in milliseconds, result of template calculation",
+          "type": "integer",
+          "minimum": 0
+      }
+    },
+    "required": [
+      "application",
+      "external_service",
+      "calculated_timeout_ms"
+    ]
+  }
+  

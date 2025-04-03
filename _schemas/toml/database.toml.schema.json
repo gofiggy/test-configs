@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Schema for toml/database.toml",
+    "description": "Validates the structure after server-side templating.",
+    "type": "object",
+    "properties": {
+        "main_db": {
+            "type": "object",
+            "properties": {
+                "host": { "type": "string" },
+                "port": { "type": "integer" },
+                "user": { "type": "string" },
+                "password": { "type": "string", "description": "Password injected via requiredEnv template" },
+                "database": { "type": "string" },
+                "connection_options": {"type": "string"}
+            },
+            "required": ["host", "port", "user", "password", "database", "connection_options"]
+        },
+        "replica_db": {
+            "type": "object",
+            "properties": {
+                "host": { "type": "string" },
+                "port": { "type": "integer" },
+                "user": { "type": "string" },
+                "password": { "type": "string", "description": "Password injected via getenv template (can be empty)" },
+                "database": { "type": "string" }
+            },
+            "required": ["host", "port", "user", "password", "database"]
+        }
+    },
+    "required": ["main_db", "replica_db"]
+}
