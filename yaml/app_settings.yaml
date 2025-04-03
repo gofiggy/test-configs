@@ -1,0 +1,11 @@
+service:
+  name: gofiggy-test-app
+  port: 8090
+logging:
+  level: "info"
+  enabled_plugins:
+    - request_logger
+    - cors_handler
+  request_timeout_seconds: 30
+  debug_mode: false
+  optional_component: null

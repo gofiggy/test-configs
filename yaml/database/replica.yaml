@@ -1,0 +1,8 @@
+read_replica:
+  host: "db.replica.example.com"
+  port: 5432
+  username: "replica_user"
+  ssl_mode: "require"
+  read_only: true
+  max_replication_lag_seconds: 2.5
+  synchronous_commit: false

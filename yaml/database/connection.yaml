@@ -1,0 +1,13 @@
+primary:
+  host: "db.prod.example.com"
+  port: 5432
+  username: "prod_user"
+  ssl_mode: "require"
+  pool_options:
+    max_connections: 100
+    idle_timeout: "5m"
+  connection_retry:
+    enabled: true
+    max_attempts: 5
+  flags:
+    - enable_extended_logging
