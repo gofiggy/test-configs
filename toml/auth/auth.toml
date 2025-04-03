@@ -1,0 +1,9 @@
+[jwt]
+secret_key = "super-secret-jwt-key-placeholder"
+expiry_minutes = 60
+issuer = "gofiggy-test"
+
+[oauth.google]
+client_id = "google-client-id-placeholder"
+enabled = true
+scopes = ["openid", "email", "profile"] 

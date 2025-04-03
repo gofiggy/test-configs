@@ -1,0 +1,28 @@
+{
+  "users_api": {
+    "url": "https://api.example.com/users",
+    "timeout_ms": 500,
+    "enabled": true
+  },
+  "products_api": {
+    "url": "https://api.example.com/products",
+    "timeout_ms": 1000,
+    "enabled": false,
+    "allowed_methods": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "payments_api": {
+    "url": "https://api.example.com/payments",
+    "timeout_ms": 750,
+    "enabled": true,
+    "credentials": {
+      "username": "pay_user",
+      "api_key": "key-placeholder"
+    },
+    "regions": ["us-east-1", "eu-west-1"],
+    "rate_limit_per_sec": 100.5,
+    "optional_setting": null
+  }
+} 

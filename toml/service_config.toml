@@ -1,0 +1,35 @@
+title = "My Awesome Service"
+
+[owner]
+name = "Test User"
+organization = "Test Org"
+dob = 1979-05-27T07:32:00-08:00
+
+[database]
+server = "192.168.1.100"
+ports = [ 8000, 8001, 8002 ]
+connection_max = 5000
+enabled = true
+
+[servers]
+  [servers.alpha]
+  ip = "10.0.0.1"
+  role = "frontend"
+  [servers.beta]
+  ip = "10.0.0.2"
+  role = "backend"
+
+[logging]
+level = "warn"
+rotation_days = 7
+
+[cache]
+enabled = true
+default_ttl = "5m"
+
+# Feature flags defined as an inline table
+features = { new_ui = true, dark_mode = false, experimental_search = true }
+
+[thresholds]
+cpu_warning = 80.5
+memory_critical = 95.0 
