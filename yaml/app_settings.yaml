@@ -9,3 +9,6 @@ logging:
   request_timeout_seconds: 30
   debug_mode: false
   optional_component: null
+external_service:
+  url: https://api.example.com/v1
+  api_key: '{{ getenv "EXTERNAL_API_KEY" }}'

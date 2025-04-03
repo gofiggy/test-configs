@@ -5,11 +5,21 @@ name = "Test User"
 organization = "Test Org"
 dob = 1979-05-27T07:32:00-08:00
 
-[database]
-server = "192.168.1.100"
-ports = [ 8000, 8001, 8002 ]
-connection_max = 5000
-enabled = true
+[main_db]
+host = "db.example.toml"
+port = 5432
+user = "toml_user"
+# Require the password from environment; fail if MAIN_DB_PASSWORD is not set
+password = "{{ requiredEnv \"MAIN_DB_PASSWORD\" }}"
+database = "main_toml_db"
+
+[replica_db]
+host = "replica.db.example.toml"
+port = 5432
+user = "toml_user_ro"
+# Use getenv here, allows empty password if not set (adjust logic if needed)
+password = "{{ getenv \"REPLICA_DB_PASSWORD\" }}"
+database = "main_toml_db"
 
 [servers]
   [servers.alpha]

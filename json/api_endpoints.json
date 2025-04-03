@@ -1,17 +1,13 @@
 {
-  "users_api": {
-    "url": "https://api.example.com/users",
-    "timeout_ms": 500,
-    "enabled": true
+  "users": {
+    "get": "/api/users/{id}",
+    "list": "/api/users",
+    "timeout_ms": 500
   },
-  "products_api": {
-    "url": "https://api.example.com/products",
-    "timeout_ms": 1000,
-    "enabled": false,
-    "allowed_methods": [
-      "GET",
-      "HEAD"
-    ]
+  "products": {
+    "get": "/api/products/{sku}",
+    "list": "/api/products",
+    "timeout_ms": 1000
   },
   "payments_api": {
     "url": "https://api.example.com/payments",
@@ -25,4 +21,4 @@
     "rate_limit_per_sec": 100.5,
     "optional_setting": null
   }
-} 
+}
