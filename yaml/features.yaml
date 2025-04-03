@@ -4,10 +4,10 @@ flags:
 experiments:
   checkout_v2_ratio: 0.5
   beta_user_ids:
-    - 101
+    - 211
     - 256
     - 999
   api_version: 2.1
   advanced_search:
-    enabled: false
+    enabled: true
     indexing_depth: 5
